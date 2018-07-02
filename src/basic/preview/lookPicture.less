@@ -1,0 +1,303 @@
+@import '../../style/mixins.less';
+
+@font-face {
+  font-family: 'anticon';
+  src: url('https://at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.eot');
+  src: url('https://at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.svg#iconfont') format('svg');
+}
+
+@keyframes antSpinMove {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes antRotate {
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.transit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+
+.transit-spin {
+  font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: middle;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  transform: rotate(45deg);
+  -webkit-animation: antRotate 1.2s infinite linear;
+  animation: antRotate 1.2s infinite linear;
+}
+
+.transit-spin i {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #1890ff;
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  display: block;
+  position: absolute;
+  opacity: 0.3;
+  animation: antSpinMove 1s infinite linear alternate;
+  transform-origin: 50% 50%;
+}
+
+.transit-spin i:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.transit-spin i:nth-child(2) {
+  right: 0;
+  top: 0;
+  animation-delay: 0.4s;
+}
+
+.transit-spin i:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  animation-delay: 0.8s;
+}
+
+.transit-spin i:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  animation-delay: 1.2s;
+}
+
+.look-picture {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  background: #f5f7f7;
+  -webkit-app-region: no-drag;
+  .title {
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-app-region: drag;
+    border-bottom: 1px solid @color-line;
+    .right {
+      -webkit-app-region: no-drag;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i {
+        display: inline-block;
+        font-size: 18px;
+        font-style: normal;
+        vertical-align: baseline;
+        text-align: center;
+        text-transform: none;
+        line-height: 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        color: #777;
+        -webkit-app-region: no-drag;
+        cursor: pointer;
+        &:hover {
+          color: #ccc;
+        }
+        &:before {
+          display: block;
+          font-family: 'anticon' !important;
+          box-sizing: border-box;
+        }
+        &.plus-o {
+          &:before {
+            content: '\E625';
+          }
+        }
+        &.minus-o {
+          &:before {
+            content: '\E623';
+          }
+        }
+        &.reload {
+          &:before {
+            content: '\E616';
+          }
+        }
+        &.download {
+          &:before {
+            content: '\E6B7';
+          }
+        }
+        &.minus {
+          &:before {
+            content: '\E624';
+          }
+        }
+        &.close {
+          &:before {
+            content: '\E633';
+          }
+        }
+      }
+    }
+    .tool {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      i {
+        margin: 6px 10px;
+      }
+    }
+    .action-bar {
+      border-left: 1px solid @color-line;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      i {
+        font-size: 16px;
+        margin: 6px 8px;
+      }
+    }
+  }
+  .img-content {
+    height: calc(~"100% - 56px");
+    background: #f5f7f7;
+  }
+}
+
+.fancybox-container {
+  margin-top: 56px;
+  height: calc(~"100% - 56px");
+  .fancybox-bg {
+    background: #f5f7f7;
+    opacity: 1;
+  }
+  .fancybox-infobar {
+    display: none;
+  }
+  .fancybox-navigation {
+    display: block;
+  }
+  .fancybox-slide--image {
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .fancybox-image-wrap {
+    transform-origin: 50% 50%;
+  }
+}
+
+.look-message {
+  font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  z-index: 101000;
+  width: 100%;
+  top: 16px;
+  left: 0;
+  pointer-events: none;
+  .message-notice {
+    padding: 8px;
+    text-align: center;
+  }
+  .message-notice-content {
+    padding: 10px 16px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    display: inline-block;
+    pointer-events: all;
+    i {
+      margin-right: 8px;
+      font-size: 16px;
+      top: 1px;
+      position: relative;
+      display: inline-block;
+      font-style: normal;
+      vertical-align: baseline;
+      text-align: center;
+      text-transform: none;
+      line-height: 1;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      &:before {
+        content: '\E630';
+        display: block;
+        font-family: "anticon" !important;
+      }
+    }
+  }
+  .success {
+    i {
+      color: #52c41a;
+    }
+  }
+  .fade-in {
+    animation: fadeIn .2s ease-in-out forwards;
+  }
+  .fade-out {
+    animation: fadeOut .2s ease-in-out forwards;
+  }
+}

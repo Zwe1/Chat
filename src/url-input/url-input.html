@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>选择服务器地址~</title>
+  <script>
+    window.baseURL = 'https://ms.wx.weaver.com.cn';
+  </script>
+</head>
+
+<body>
+  <div id="react-root">
+    <div class="url-input-wrapper" style="display: none">
+      <div class="url-input-header">
+        <h1>E-Mobile</h1>
+        <div class="operations">
+          <span class="minus">-</span>
+          <span class="close">×</span>
+        </div>
+      </div>
+      <div class="url-form">
+        <section class="layout">
+          <input type="text" value="" placeholder="请输入服务器地址" class="input default" id="server-address" />
+          <span class="verification"></span>
+          <ul class="drop-down"></ul>
+        </section>
+        <footer class="layout">
+          <button id="enter" class="btn default">确定</button>
+        </footer>
+      </div>
+    </div>
+
+    <div class='transit' style="display: flex">
+      <span class='transit-spin'>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
+    </div>
+  </div>
+  
+  <script src="js/url-input.js"></script>
+</body>
+
+</html>

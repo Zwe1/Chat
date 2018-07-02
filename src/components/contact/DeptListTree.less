@@ -1,0 +1,109 @@
+@import '../../style/mixins.less';
+
+.dept-tree-scroll {
+  height: calc(~"100% - 52px") !important;
+  > div {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .ant-select {
+    width: 100%;
+    .ant-select-selection {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  &.person-dept-list {
+    height: calc(~"100% - 8px") !important;
+    .dept-tree-content {
+      .company-li {
+        .ant-tree-child-tree {
+          padding-left: 6px;    
+        }
+      }
+    }
+  }
+}
+
+.dept-tree-normal-scroll {
+  height: 100% !important;
+}
+
+.no-checked {
+  li span.ant-tree-switcher-noop {
+    // display: none;
+  }
+}
+
+.dept-tree {
+  // disable 状态的头像 白色的字
+  position: absolute;
+  width: 88%;
+  top: -2px;
+  background: white;
+  z-index: 1;
+  li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span.ant-avatar-string {
+    color: @color-white;
+  }
+
+  .ant-tree li .ant-tree-node-content-wrapper {
+    height: auto;
+  }
+
+  .company-li {
+    .ant-tree-node-content-wrapper {
+      width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tree-icon {
+      font-size: 16px;
+      margin-top: -2px;
+    }
+  }
+
+  .user-li {
+    display: flex;
+    align-items: center;
+
+    .ant-tree-node-content-wrapper {
+      height: 48px;
+      line-height: 48px;
+      width: 100%;
+
+      .user-div {
+        display: flex;
+        align-items: center;
+        height: 48px;
+
+        .ant-avatar {
+          flex: 0 0 40px;
+        }
+
+        .user-span {
+          display: inline-block;
+          line-height: 18px;
+          vertical-align: middle;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        b {
+          font-weight: normal;
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.tree-checked {
+  .company-li {
+    .ant-tree-node-content-wrapper {
+      width: 80%;
+    }
+  }
+}

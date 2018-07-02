@@ -1,0 +1,86 @@
+.chat-title {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px 10px 8px 19px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 55px;
+  background-color: @color-bg-chat;
+
+  .person-info {
+    width: calc(~"100% - 150px");
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .info {
+      display: inline-block;
+      //line-height: 55px;
+      //height: 55px;
+      margin-left: 15px;
+      width: calc(~"100% - 60px");
+    }
+
+    .ant-avatar {
+      vertical-align: middle;
+    }
+
+    h1 {
+      display: inline-block;
+      line-height: 22px;
+      font-size: 16px;
+      margin-bottom: 0;
+      color: @color-text-main;
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    p {
+      font-size: 12px;
+      color: @color-text-light;
+      width: 100%;
+      margin-bottom: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      b {
+        position: relative;
+        font-weight: normal;
+        display: inline-block;
+        padding-left: 21px;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 1px;
+          height: 10px;
+          background: @color-text-super-super-light;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .operations {
+    display: inline-block;
+    .anticon-message {
+      font-size: 18px;
+    }
+
+    i {
+      margin-left: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        color: @color-blue;
+      }
+    }
+  }
+}

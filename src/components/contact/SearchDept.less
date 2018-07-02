@@ -1,0 +1,141 @@
+@import '../../style/mixins.less';
+
+.dept-search-scroll {
+  height: calc(~"100% - 52px") !important;
+  .no-data {
+    font-size: 12px;
+    color: @color-text-light;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .dept-search-spin {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .person-title, .dept-title {
+    font-size: 16px;
+    color: @color-text-main;
+    line-height: 42px;
+    padding-left: 25px;
+    border-bottom: 1px solid @color-line;
+  }
+  .dept-title {
+    border-top: 1px solid @color-line;
+    padding-left: 12px;
+  }
+}
+
+.dept-div {
+  .ant-input-search {
+    width: 88%;
+    margin: 10px 20px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    .ant-input {
+      padding-right: 30px;
+      padding-left: 40px;
+      box-shadow: none;
+      background: transparent;
+      height: 28px;
+      font-weight: 300;
+    }
+    .ant-input-suffix {
+      left: 12px;
+      right: auto;
+    }
+    .ant-input-prefix {
+      left: auto;
+      right: 12px;
+      cursor: pointer;
+      &:hover {
+        color: @color-blue;
+      }
+    }
+  }
+  .item-list {
+    height: 56px;
+    padding-left: 35px;
+    cursor: pointer;
+    .user-div {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      .ant-avatar {
+        flex: 0 0 40px;
+      }
+      .user-span {
+        display: inline-block;
+        line-height: 18px;
+        vertical-align: middle;
+        width: calc(~"100% - 42px");
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      b {
+        font-weight: normal;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    &:hover {
+      background: #e6f7ff;
+    }
+  }
+  .active {
+    background: #bae7ff! important;
+  }
+}
+
+.search-tree {
+  .ant-tree li .ant-tree-node-content-wrapper {
+    height: auto;
+  }
+
+  .company-li {
+    .ant-tree-node-content-wrapper {
+      width: calc(~"100% - 28px");
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .user-li {
+    display: flex;
+    align-items: center;
+
+    .ant-tree-node-content-wrapper {
+      height: 48px;
+      line-height: 48px;
+
+      .user-div {
+        display: flex;
+        align-items: center;
+        height: 48px;
+
+        .ant-avatar {
+          flex: 0 0 40px;
+        }
+
+        .user-span {
+          display: inline-block;
+          line-height: 18px;
+          vertical-align: middle;
+          width: calc(~"100% - 42px");
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        b {
+          font-weight: normal;
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.dept-height {
+  height: 100%;
+}

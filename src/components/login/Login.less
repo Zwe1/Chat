@@ -1,0 +1,300 @@
+@import '../../style/mixins.less';
+
+.login-default-page {
+  height: 100%;
+
+  .login-header {
+    -webkit-app-region: drag;
+    background-color: @main-color;
+    color: #fff;
+    height: 40px;
+    padding: 2px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    > h1 {
+      color: #fff;
+      font-size: 18px;
+      padding-left: 3px; // qiangpozheng
+      margin: 0;
+    }
+
+    .operations {
+      -webkit-app-region: no-drag;
+
+      i {
+        font-size: 16px;
+        padding: 3px;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: all .3s;
+        border-radius: 4px;
+
+        &:hover {
+         background-color: @main-color-dark;
+        }
+      }
+    }
+  }
+
+  .home-login {
+    background: #fff;
+    width: 30%;
+    min-width: 400px;
+    min-height: 335px;
+    box-shadow: 0 0 60px #666;
+    border-radius: 5px;
+    padding-bottom: 20px;
+  }
+
+  .qrcode-wrapper {
+    text-align: center;
+  }
+
+  .login-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .code-login {
+      margin-top: 15px;
+      position: relative;
+      .user-code-img {
+        text-align: center;
+        .oli-avatar {
+          display: inline-block;
+        }
+        h2 {
+          font-size: 20px;
+          font-weight: 500;
+          color: @color-text-main;
+          text-align: center;
+        }
+      }
+      img {
+        width: 190px;
+        height: 190px;
+      }
+      .overlay {
+        width: 190px;
+        height: 190px;
+        top: 0;
+        left: 0;
+        font-size: 14px;
+        color: #a94442;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.85);
+        z-index: 10;
+      }
+      .remarks {
+        margin-top: 20px;
+        text-align: center;
+        i {
+          font-size: 24px;
+          vertical-align: middle;
+        }
+        .icon-warning {
+          color: #f5222d;
+        }
+        .icon-success {
+          color: #52c41a;
+        }
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 14px;
+          a {
+            display: inline-block;
+            color: @color-blue;
+            margin-left: 8px;
+            i {
+              font-size: 16px;
+            }
+            &:hover {
+              text-decoration: none;
+              border-bottom: none;
+            }
+          }
+        }
+        .marginL {
+          margin-left: 10px;
+        }
+        .text {
+          display: inline-block;
+          vertical-align: middle;;
+          margin-left: 10px;
+          text-align: left;
+          h3 {
+            font-size: 14px;
+            font-weight: normal;
+            margin-bottom: 0;
+          }
+        }
+        .user-code-cancel {
+          display: block;
+          width: 68px;
+          font-size: 18px;
+          border: 1px solid currentColor;
+          border-radius: 4px;
+          text-align: center;
+          color: @color-blue;
+          line-height: 32px;
+          margin: 10px auto 0;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .change-baseurl-i {
+    font-size: 16px;
+    vertical-align: middle;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    margin-left: 10px;
+    &:hover {
+      color: #40a9ff;
+    }
+  }
+
+  .login-form {
+    margin-top: 10px;
+    width: 230px;
+
+    .ant-form-item {
+      margin-bottom: 13px;
+    }
+
+    .server-url .ant-form-item-children {
+      display: flex;
+      align-items: center;
+
+      span.ant-form-text {
+        max-width: 200px;
+        height: 30px;
+        line-height: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      i {
+        display: inline-block;
+        //height: 30px;
+      }
+    }
+
+  }
+
+  .forget-regist-wrapper {
+    float: right;
+    margin-top: 10px;
+
+    > a {
+      text-decoration: none;
+      color: #888;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+  }
+
+  .step-wrapper {
+    > h1 {
+      font-size: 20px;
+      margin: 20px 20px 0;
+    }
+    .ant-steps {
+      .ant-steps-item {
+        display: inline-block !important;
+        margin-right: 0;
+        .ant-steps-item-icon {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .btn-back {
+    margin-left: 10px;
+  }
+
+  .login-form-button {
+    width: 100%;
+  }
+
+  .ant-tabs-bar {
+    border-bottom: 0;
+    //max-width: 230px;
+  }
+
+  // tabs
+  .ant-tabs-nav-wrap {
+    display: flex;
+    justify-content: center;
+
+    .ant-tabs-tab {
+      line-height: 30px;
+      margin-right: 20px;
+      margin-left: 5px;
+      //font-size: 14px;
+    }
+  }
+
+  .step-wrapper {
+    padding: 20px;
+  }
+
+  .forget-form {
+    h3 {
+      color: @color-text-main;
+      font-size: 16px;
+      font-weight: normal;
+    }
+    .ant-col-8 {
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .captcha-img {
+    width: 100%;
+    line-height: 1;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  .col-login-actions {
+    .ant-row {
+      margin-bottom: 5px;
+    }
+  }
+
+  .login-loading-wrapper {
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.login-linear-gradient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-20deg, #86746e, #4c90c2);
+}

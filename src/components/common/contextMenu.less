@@ -1,0 +1,78 @@
+@import '../../style/mixins.less';
+
+.react-contextmenu {
+  padding: 5px 0;
+  text-align: left;
+  background-color: #fff;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease !important;
+  z-index: 1;
+  box-shadow: 1px 1px 8px #ccc;
+}
+
+.react-contextmenu.react-contextmenu--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.react-contextmenu-item {
+  padding: 5px 25px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 12px;
+  color: @color-text-main;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.react-contextmenu-item.react-contextmenu-item--active,
+.react-contextmenu-item.react-contextmenu-item--selected {
+  background-color: #f2f8f8;
+  text-decoration: none;
+}
+
+.react-contextmenu-item.react-contextmenu-item--disabled,
+.react-contextmenu-item.react-contextmenu-item--disabled:hover {
+  color: #878a8c;
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, .15);
+}
+
+.react-contextmenu-item--divider {
+  margin-bottom: 3px;
+  padding: 2px 0;
+  border-bottom: 1px solid @color-line;
+  cursor: inherit;
+}
+
+.react-contextmenu-item--divider:hover {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, .15);
+}
+
+.react-contextmenu-item.react-contextmenu-submenu {
+  padding: 0;
+}
+
+.react-contextmenu-item.react-contextmenu-submenu > .react-contextmenu-item {
+
+}
+
+.react-contextmenu-item.react-contextmenu-submenu > .react-contextmenu-item:after {
+  content: "\25B6";
+  display: inline-block;
+  position: absolute;
+  right: 7px;
+}
+
+.example-multiple-targets::after {
+  content: attr(data-count);
+  display: block;
+}

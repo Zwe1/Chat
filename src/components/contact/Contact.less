@@ -1,0 +1,219 @@
+@import '../../style/mixins.less';
+
+.contact-default-page {
+
+  .left-list-wraper {
+    background-color: #fff;
+    overflow-y: auto;
+    .ant-layout-sider-children {
+      height: 97%;
+      .ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title {
+        width: 100%;
+      }
+    }
+  }
+
+  .content-header {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    border-bottom: 1px solid pink;
+    font-size: 16px;
+  }
+
+  .content {
+    //margin: 10px;
+    background: #fff;
+    position: relative;
+  }
+
+  .content-left-list-wraper {
+    background-color: #fff;
+    border-right: 1px solid @color-line;
+    //overflow-y: auto;
+    // overflow-x: auto;
+    flex: 0 0 38% !important;
+    max-width: 38% !important;
+    min-width: 38% !important;
+    width: 38% !important;
+  }
+
+  .content-view-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+  }
+
+  .content-view {
+    background-color: #fff;
+    width: 70%;
+    max-width: 360px;
+    min-width: 300px;
+    text-align: center;
+
+    .user-header-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 1px solid pink;
+    }
+
+    .right-wrapper {
+      //margin-left: 20px;
+
+      .main-tenant-name {
+        text-align: left;
+      }
+    }
+
+    .name-gender {
+      display: flex;
+      align-items: center;
+    }
+
+    &.dept {
+      text-align: center;
+      h1 {
+        margin: 10px 0;
+      }
+
+      h3 {
+        span {
+          color: @color-blue-light;
+          display: inline-block;
+          cursor: pointer;
+
+          &:after {
+            content: '/';
+            display: inline-block;
+          }
+
+          &:last-child {
+
+            &:after {
+              content: '';
+            }
+          }
+        }
+      }
+
+      > p {
+      }
+    }
+
+    &.user {
+      h2.name {
+        font-size: 22px;
+        margin: 10px 0;
+        display: inline-block;
+      }
+
+      span.avatar {
+        font-size: 16px;
+        margin-left: 6px;
+
+        &.male {
+          color: @color-blue
+        }
+
+        &.famale {
+          color: red;
+        }
+      }
+
+    }
+
+    .ant-avatar {
+      i {
+        font-size: 50px;
+        line-height: 100px;
+      }
+    }
+
+    .company-info-wrapper {
+      text-align: left;
+
+      .company-name {
+        margin: 15px 0 10px 0;
+        color: #000;
+      }
+
+      .company-attr {
+        color: #000;
+        line-height: 2;
+        display: flex;
+
+        > span {
+          display: inline-block;
+        }
+        i {
+          font-style: normal;
+        }
+        b {
+          font-weight: normal;
+          color: @color-blue;
+          // cursor: pointer;
+        }
+      }
+
+      .attr-label {
+        flex: 0 0 70px;
+        width: 70px;
+        color: @color-text-light;
+      }
+
+    }
+
+  }
+
+  .ant-menu-submenu > .ant-menu {
+    //background-color: @color-white-middle;
+  }
+
+  .ant-menu-inline .ant-menu-submenu-title {
+    //background-color: @color-white-middle;
+    //border-bottom: 1px solid @color-white-dark;
+    //border-top: 1px solid @color-white-dark;
+    padding-right: 30px;
+    //margin: 0;
+  }
+
+  .ant-menu-inline,
+  .ant-menu-vertical {
+    border-right: 0;
+  }
+
+  .ant-menu-vertical .ant-menu-item:not(:last-child),
+  .ant-menu-vertical-left .ant-menu-item:not(:last-child),
+  .ant-menu-vertical-right .ant-menu-item:not(:last-child),
+  .ant-menu-inline .ant-menu-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.company-tooltip {
+  padding-left: 0 !important;
+  .ant-tooltip-arrow {
+    display: none;
+  }
+  .ant-tooltip-inner {
+    padding: 4px 6px;
+    min-height: auto;
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+.contact-person {
+  min-width: 270px;
+  max-width: 450px;
+}
+
+.commonGroup {
+  height: 100%;
+}
+

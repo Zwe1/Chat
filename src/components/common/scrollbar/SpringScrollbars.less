@@ -1,0 +1,27 @@
+@import '../../../style/mixins.less';
+
+.oli-scrollbars {
+
+  .oli-track-vertical,
+  .oli-track-horizontal {
+    opacity: 0 !important;
+    transition: all 0.3s;
+    border-radius: 4px;
+    right: 0;
+    bottom: 0;
+  }
+
+  .oli-track-vertical {
+    top: 0;
+  }
+
+  .oli-track-horizontal {
+    left: 0;
+  }
+
+  &:hover .oli-track-vertical,
+  &:hover .oli-track-horizontal {
+    opacity: 1 !important;
+  }
+
+}

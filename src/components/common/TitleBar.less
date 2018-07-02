@@ -1,0 +1,88 @@
+@import '../../style/mixins.less';
+
+.common-title-bar {
+  height: @home-title-bar-height;
+  flex-shrink: 0;
+  display: flex;
+  background: #fff;
+  color: @color-text-light;
+  position: absolute;
+  width: calc(~"100% - 61px");
+  top: 0;
+  right: 0;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-app-region: drag;
+  border-bottom: 1px solid @color-line;
+  z-index: 10;
+
+  &.no-drag {
+    -webkit-app-region: no-drag !important;
+  }
+
+  .left {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  .logo-wrapper {
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    > span {
+      font-size: 16px;
+      margin-left: 10px;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .right {
+    -webkit-app-region: no-drag;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .in-app {
+      margin-right: 110px;
+    }
+
+    .btn-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      > div {
+        display: inline-block;
+      }
+    }
+  }
+
+  .action-bar {
+    border-left: 1px solid @color-line;
+    height: @home-title-bar-height;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    i.anticon {
+      font-size: 16px;
+      margin: 6px;
+      -webkit-app-region: no-drag;
+      cursor: pointer;
+
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+}

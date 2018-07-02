@@ -1,0 +1,42 @@
+@import '../../style/mixins.less';
+
+.recent-chat-list {
+  display: flex;
+
+  .check-all {
+    width: 100%;
+    padding: 6px 4px;
+  }
+
+  .recent-chat-list-ck-group {
+    width: 100%;
+
+    .recent-chat-list-ck {
+      padding: 10px 4px;
+      border-top: 1px solid @color-line;
+
+      .ant-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+
+        span {
+          display: inline-block;
+        }
+
+        > span:not(.ant-checkbox) {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .name {
+        padding-left: 10px;
+        display: inline-block;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

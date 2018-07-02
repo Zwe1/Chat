@@ -1,0 +1,47 @@
+@import '../../style/mixins.less';
+
+.link-message-modal {
+	height: 100%;
+	background: #fff;
+	position: relative;
+	padding-top: 1px;
+	.link-webview {
+		height: calc(~"100% - 58px");
+		margin-top: 58px;
+	}
+	.common-title-bar {
+		width: 100%;
+	}
+	.btn-div {
+		background: transparent;
+		position: absolute;
+		top: 10px;
+		right: 120px;
+		-webkit-app-region: no-drag;
+		z-index: 10;
+		.ant-btn {
+			background: transparent;
+			border: none;
+			padding: 0 12px;
+		}
+		i {
+			cursor: pointer;
+			color: @color-text-light;
+		}
+	}
+	.webview-spin-content {
+		position: fixed;
+		left: 0;
+		top: 58px;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		z-index: 1;
+	}
+	.webview-spin {
+		position: absolute;
+		top: 80px;
+		left: 50%;
+		transfrom: translateX(-50%);
+	}
+}

@@ -1,0 +1,30 @@
+@import '../../style/mixins.less';
+
+.person-setting {
+	width: 420px !important;
+	.ant-spin {
+		display: block;
+		margin: 30px auto;
+	}
+	.ant-modal-header {
+		background: #f1f2f6;
+		border-bottom: none;
+	}
+	.ant-modal-body {
+		padding: 12px 24px;
+		.ant-form-item {
+			margin-bottom: 18px;
+			&:first-child {
+				margin-top: 20px;
+			}
+		}
+		.ant-form-item-label {
+			width: 92px;
+			text-align: left;
+			vertical-align: top;
+		}
+		.ant-form-item-control-wrapper {
+			display: inline-block;
+		}
+	}
+}

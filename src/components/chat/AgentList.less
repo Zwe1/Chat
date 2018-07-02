@@ -1,0 +1,31 @@
+@import '../../style/mixins.less';
+
+.agent-list {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 55px;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .list-content {
+    width: 400px;
+    margin: 0 auto;
+    .ant-list-item-meta-avatar {
+      margin-right: 5px;
+      .agent-avatar {
+        overflow: visible;
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+      }
+    }
+    .ant-list-item-meta-description {
+      width: 250px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

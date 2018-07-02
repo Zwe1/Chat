@@ -1,0 +1,80 @@
+@import '../../style/mixins.less';
+
+.content-group {
+  .group-div {
+    width: 100%;
+    .ant-alert {
+      width: 80%;
+      margin: 20px 0 0 30px;
+    }
+  }
+  .group-head {
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    font-size: 14px;
+    color: @color-text-main;
+    padding-left: 64px;
+    background: transparent url('../../assets/images/group.png') 20px 50% no-repeat;
+    background-size: 38px 38px;
+    border-bottom: 1px solid @color-line;
+  }
+}
+
+.group-list {
+  padding: 8px 0;
+
+  &.contact-group-list ~ {
+    .ant-list-item {
+      padding-left: 10px;
+    }
+  }
+
+  .ant-spin {
+    margin: 30px auto 0;
+    display: block;
+  }
+
+  .ant-list-item {
+    cursor: pointer;
+    border-bottom: none;
+
+    .oli-avatar {
+      margin-left: 10px;
+    }
+
+    .list-content {
+      display: inline-block;
+      margin-left: 8px;
+      vertical-align: middle;
+      h3, h4 {
+        margin: 0;
+        line-height: 1.4em;
+      }
+      h3 {
+        font-size: 13px;
+        color: @color-text-main;
+      }
+      h4 {
+        font-size: 12px;
+        color: #aaa;
+      }
+      b {
+        display: inline-block;
+        font-size: 9px;
+        font-weight: normal;
+        border: 1px solid #EDA458;
+        border-radius: 2px;
+        color: #FFB6C1;
+        padding: 0 5px;
+        line-height: 14px;
+        height: 14px;
+        vertical-align: baseline;
+        margin-left: 10px;
+      }
+    }
+    &:hover {
+      background: #e6f7ff;
+    }
+  }
+}

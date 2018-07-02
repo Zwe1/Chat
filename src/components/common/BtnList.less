@@ -1,0 +1,30 @@
+@import '../../style/mixins.less';
+
+.btn-list {
+  .title-btn {
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+    .btn-img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .title-btn-tooltip {
+    padding-left: 0;
+    .ant-tooltip-arrow {
+      display: none;
+    }
+    .ant-tooltip-inner {
+      font-size: 11px;
+      min-height: auto;
+    }
+  }
+}
+
+.btn-list-in-web {
+  margin-right: 45px;
+}

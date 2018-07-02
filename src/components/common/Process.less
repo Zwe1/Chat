@@ -1,0 +1,37 @@
+@import '../../style/mixins.less';
+
+.create-process {
+  .ql-process {
+    font-size: 17px;
+    i {
+      vertical-align: top;
+    }
+  }
+}
+
+.create-process-modal {
+  top: 40px;
+  width: 600px !important;
+  .ant-modal-close-x {
+    height: 40px;
+    line-height: 40px;
+  }
+  .ant-modal-header {
+    height: 40px;
+    background: #f1f2f6;
+    border-bottom: none;
+    padding: 0 24px;
+    line-height: 40px;
+    .ant-modal-title {
+      line-height: 40px;
+    }
+  }
+  .ant-modal-body {
+    padding: 5px 0;
+    iframe {
+      border: none;
+      width: 100%;
+      min-height: 500px;
+    }
+  }
+}

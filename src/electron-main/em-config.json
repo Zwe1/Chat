@@ -1,0 +1,40 @@
+{
+  "base_url_wo": "http://192.168.83.125:8888",
+  "base_url": "https://ms.wx.weaver.com.cn",
+  "base_url_zhu": "http://192.168.83.127:8089/emobile-web",
+  "ws_url": "ws://192.168.83.125:8088/wst/websocket",
+  "appId": "f1ad5385b8ca45fba39634eef59f7e98",
+  "dev_url": "http://localhost:3001",
+  "size": [
+    968,
+    640
+  ],
+  "loginSize": [
+    300,
+    450
+  ],
+  "appSize": [
+    1024,
+    768
+  ],
+  "videoSize": [
+    520,
+    420
+  ],
+  "customSize": [
+    968,
+    640
+  ],
+  "urlInputSize": [
+    320,
+    240
+  ],
+  "linkSize": [
+    968,
+    640
+  ],
+  "histroyMessageSize": [
+    500,
+    650
+  ]
+}

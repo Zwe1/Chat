@@ -1,0 +1,145 @@
+@import '../../style/mixins.less';
+
+.create-group-search {
+	position: relative;
+	padding-bottom: 10px;
+	border-bottom: 1px solid @color-line;
+
+	.create-group-search-input {
+		width: 310px;
+		.ant-input {
+			padding-left: 11px !important;
+		}
+		.ant-input-suffix {
+			display: none;
+		}
+		.ant-input-prefix {
+			right: 12px;
+			left: auto;
+		}
+	}
+}
+
+.create-group-search-popover-no-result {
+	.ant-popover-content {
+  	.ant-popover-inner {
+  		.ant-popover-inner-content {
+  			padding: 1px 0 0;
+  			height: 120px;
+  			background: #f4f4f4;
+  		}
+  	}
+  }
+}
+
+.create-group-search-popover {
+	width: 310px;
+  padding-top: 0;
+  z-index: 9999;
+
+  .ant-popover-content {
+  	.ant-popover-inner {
+  		.ant-popover-inner-content {
+  			padding: 1px 0 0;
+  			height: 270px;
+  			background: #f4f4f4;
+  		}
+  	}
+  }
+
+  .network-spin {
+		margin: 60px auto 0;
+		display: block;
+	}
+
+  .no-data {
+  	font-size: 18px;
+  	color: @color-text-light;
+  	text-align: center;
+  	padding-top: 24px;
+  }
+
+  .list {
+  	padding: 0 0 0 65px;
+		background: #fff;
+		position: relative;
+		cursor: pointer;
+		.oli-avatar {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 15px;
+		}
+		.user-content {
+			padding: 10px 15px 10px 0;
+			border-bottom: 1px solid @color-line;
+			height: 67px;
+			box-sizing: border-box;
+			h3, h4, h5 {
+				font-weight: normal;
+				margin-bottom: 0;
+				font-size: 12px;
+			}
+			h3 {
+				color: @color-text-main;
+				line-height: 1.5em;
+				span {
+        	color: @color-blue;
+        }
+			}
+			h4 {
+				white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+			}
+			h4, h5 {
+        line-height: 1.2em;
+				color: @color-text-light;
+			}
+			.single {
+				line-height: 47px;
+			}
+		}
+  }
+
+  .load-more {
+		background: #fff;
+		line-height: 44px;
+		padding-left: 24px;
+		position: relative;
+		cursor: pointer;
+		box-sizing: border-box;
+		h2 {
+			color: #547cae;
+			font-size: 12px;
+			.anticon {
+				margin-right: 12px;
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			width: 4px;
+			height: 4px;
+			border-top: 1px solid @color-text-light;
+			border-right: 1px solid @color-text-light;
+			transform: translateY(-50%) rotate(45deg);
+			box-sizing: border-box;
+		}
+	}
+
+	.load-over {
+		font-size: 12px;
+		line-height: 30px;
+		height: 30px;
+		text-align: center;
+		color: @color-text-light;
+	}
+
+	.active {
+		background: #fafafa;
+	}
+}

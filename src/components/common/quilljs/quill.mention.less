@@ -1,0 +1,47 @@
+@import '../../../style/mixins.less';
+
+.ql-mention-list-container {
+  width: 150px;
+  border: 1px solid @color-line;
+  border-radius: 4px;
+  background-color: @color-white;
+  // box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.ql-mention-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+@item-height: 30px;
+
+.ql-mention-list-item {
+  cursor: pointer;
+  height: @item-height;
+  line-height: @item-height;
+
+  font-size: 14px;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+.ql-mention-list-item.selected {
+  background-color: @color-bg-chat-list-active;
+  text-decoration: none;
+}
+
+.mention {
+  height: 24px;
+  width: 65px;
+  border-radius: 4px;
+  background-color: @color-bg-chat-message;
+  padding: 3px 0;
+}
+
+.mention > span {
+  margin: 0 3px;
+}

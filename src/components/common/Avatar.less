@@ -1,0 +1,82 @@
+@import '../../style/mixins.less';
+
+.oli-avatar {
+  > div {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif !important;
+  }
+  &.psShowFlag {
+    &:hover {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        background: rgba(0, 0, 0, .65);
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      &:after {
+        font-family: "anticon" !important;
+        content: '\E672';
+        display: block;
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.ant-avatar {
+  background-color: @color-white;
+}
+
+.ant-avatar-circle {
+  border-radius: 50%;
+}
+
+.ant-avatar-string {
+  line-height: inherit;
+  width: inherit;
+  height: inherit;
+  left: 0 !important;
+}
+
+.ant-popover-content {
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  .ant-popover-title {
+    min-width: 240px;
+    background: #ebeff3;
+    padding: 24px 16px;
+    color: @color-text-main;
+  }
+
+  .company-info-wrapper {
+    .btn-div {
+      .btn-chat {
+        width: 90%;
+        max-width: 400px;
+        line-height: 35px;
+        height: 35px;
+        margin: 10px auto 0;
+      }
+    }
+  }
+}
+
+.avatar-img-tooltip {
+  padding-left: 0;
+  .ant-tooltip-inner {
+    font-size: 11px;
+    min-height: auto;
+  }
+}

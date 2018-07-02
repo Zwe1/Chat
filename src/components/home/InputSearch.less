@@ -1,0 +1,75 @@
+@import '../../style/mixins.less';
+
+.input-all-search {
+  -webkit-app-region: no-drag;
+  width: 310px;
+  margin: 0 10px;
+  .ant-input-search {
+    width: 270px;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    .ant-input {
+      padding-right: 30px;
+      padding-left: 40px;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+    }
+    .ant-input-suffix {
+      left: 12px;
+      right: auto;
+    }
+    .ant-input-prefix {
+      left: auto;
+      right: 12px;
+      cursor: pointer;
+      &:hover {
+        color: @color-blue;
+      }
+    }
+    &:hover, &:active {
+      background: @color-white-f28;
+    }
+  }
+}
+
+.search-popover {
+  .ant-popover-inner-content {
+    padding: 0;
+    width: 310px;
+    .ant-tabs-bar {
+      margin-bottom: 0;
+    }
+    .ant-tabs-ink-bar {
+      width: 25% !important;
+      left: 5% !important;
+    }
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        font-size: 13px;
+        color: @color-text-light;
+        margin: 0;
+        padding: 12px 28px;
+        width: 95px;
+        text-align: center;
+      }
+      .ant-tabs-tab-active {
+        color: @color-blue;
+      }
+    }
+    .ant-tabs-nav-scroll {
+      text-align: center;
+    }
+    .ant-tabs-content {
+      height: 380px;
+    }
+    .ant-tabs-tabpane {
+      background: #f4f4f4;
+      height: 100%;
+    }
+    .ant-tabs-ink-bar {
+      background: @color-blue;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../style/mixins.less';
+
+.chat-chat-input {
+  border-top: 1px solid @color-line-dark;
+  background-color: @color-bg-chat;
+  height: @chat-input-height;
+  min-height: @chat-input-height;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  &.hover {
+    //background-color: @color-white;
+  }
+
+  .action-bar {
+    padding: 10px;
+    height: 40px;
+
+    i {
+      font-size: 18px;
+      margin: 0 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+
+  .btn-send-wrapper {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    text-align: right;
+
+    button.btn-send {
+      height: 30px;
+      margin-right: 20px;
+    }
+
+    cursor: pointer;
+    transition: all .3s;
+    color: #ccc;
+
+    &:hover {
+      //background-color: #f0f0f0;
+      color: #2db7f5;
+    }
+  }
+
+}

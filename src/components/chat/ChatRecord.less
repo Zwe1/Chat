@@ -1,0 +1,37 @@
+.global-chat-record {
+  .ant-input-affix-wrapper {
+    width: 80%;
+    margin: 0 10%;
+  }
+  section {
+    display: flex;
+    margin-top: 20px;
+    box-shadow: 0 0 1px #ccc;
+    .scroll-bar, .content-wrapper {
+      box-shadow: 0 0 1px #ccc;
+    }
+    .scroll-bar {
+      flex: 0 0 200px;
+      .chat-list {
+        width: 100%;
+      }
+    }
+    .content-wrapper {
+      flex: 1 1 auto;
+    }
+    header {
+      height: 40px;
+      width: 100%;
+      line-height: 40px;
+      text-align: right;
+      padding-right: 10px;
+      box-shadow: 0 1px 0 #eee;
+      .anticon, span {
+        cursor: pointer;
+      };
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+}

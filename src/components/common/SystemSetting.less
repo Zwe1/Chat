@@ -1,0 +1,117 @@
+@import '../../style/mixins.less';
+
+.system-setting-modal {
+	width: 420px !important;
+	.ant-modal-header {
+		background: #f1f2f6;
+		border-bottom: none;
+	}
+	.ant-modal-body {
+		padding: 20px;
+		max-height: 390px;
+		overflow-y: scroll;
+		.short-cut {
+			h1 {
+				font-size: 22px;
+				margin: 12px 0 0;
+				&.h1-bottom {
+					margin-top: 10px;
+				}
+			}
+			.con-content {
+				height: 42px;
+				line-height: 42px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 15px;
+				.con-title {
+					font-size: 15px;
+					color: @color-text-main;
+				}
+				.con-select {
+					width: 220px;
+					.ant-select-selection {
+						border: 2px solid #ddd;
+					}
+				}
+			}
+			.send-msg-con {
+				margin-top: 20px;
+				padding: 0 18px 0 3px;
+				.con-select {
+					width: 280px;
+				}
+			}
+			.list {
+				margin-top: 20px;
+				padding-left: 3px;
+				span {
+					font-size: 14px;
+					color: @color-text-light;
+				}
+				.input-content {
+					position: relative;
+					.input-clear {
+						display: block;
+						position: absolute;
+						width: 16px;
+						height: 16px;
+						top: 50%;
+						right: 30px;
+						transform: translateY(-50%);
+						&:before, &:after {
+							content: '';
+							display: block;
+							position: absolute;
+							height: 1px;
+							width: 100%;
+							top: 50%;
+							left: 0;
+							background: @color-line-dark;
+						}
+						&:before {
+							transform: rotate(45deg);
+						}
+						&:after {
+							transform: rotate(-45deg);
+						}
+						&:hover {
+							&:before, &:after {
+								background: @color-blue-light;
+							}
+						}
+					}
+				}
+				.input-error {
+					font-size: 14px;
+					margin: 5px 0 0 5px;
+					color: #ffa39e;
+				}
+				input {
+					display: block;
+					width: 95%;
+					font-size: 14px;
+					line-height: 28px;
+					border-radius: 5px;
+					margin-top: 3px;
+					box-sizing: border-box;
+					padding-left: 12px;
+					border: 2px solid @color-line-dark;
+					&:hover {
+						box-shadow: none;
+						outline: none;
+					}
+					&:focus {
+						border-color: @color-blue-light;
+						box-shadow: none;
+						outline: none;
+					}
+					&::-webkit-input-placeholder {
+						color: #ddd;
+					}
+				}
+			}
+		}
+	}
+}

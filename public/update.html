@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no'>
+
+  <title>升级</title>
+  <script>
+    window.baseURL = "${contextPath}";
+    window.apiPrifix = "/emp";
+    window.staticcdnurl = "${staticcdnurl}";
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li>当前版本：<span class="span-current"></span></li>
+      <li>最新版本：<span class="span-server"></span></li>
+    </ul>
+
+    <div class="progress">
+      <div class="progress-bar" style="width: 0%;"></div>
+    </div>
+
+    <p class="label-size-speed" style="display: none;">
+      正在下载, 大小：<span class="span-total"></span>, 速度：<span class="span-speed"></span>
+    </p>
+
+    <p class="label-error" style="display: none; color: red"></p>
+  </div>
+
+
+  <script src="${staticcdnurl}/client/main/js/update.js?${version}"></script>
+</body>
+
+</html>

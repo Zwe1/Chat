@@ -1,0 +1,116 @@
+@import '../../style/mixins.less';
+
+.home-app {
+  height: 100%;
+  .tabs-app {
+    height: 100%;
+
+    > .ant-tabs-bar {
+      position: relative;
+      width: 61px;
+
+      .ant-tabs-nav {
+        width: 61px;
+      }
+
+      .ant-tabs-nav-container {
+        height: auto;
+        padding-top: 90px;
+
+        .ant-tabs-ink-bar {
+          display: none !important;
+        }
+
+        .ant-tabs-tab {
+          margin-bottom: 8px;
+          padding: 10px 0;
+        }
+
+        .icon-bar {
+          // color: #B7D9FD;
+          // opacity: 0.3;
+          transition: all .2s linear;
+          cursor: pointer;
+          text-align: center;
+
+          img {
+            width: 25px;
+            height: 25px;
+          }
+
+          span {
+            font-size: 12px;
+            opacity: 1 !important;
+          }
+
+          &:hover,
+          &.active {
+            // color: #fff;
+            // opacity: 0.9;
+          }
+
+          .ant-badge {
+            sup {
+              box-shadow: none;
+              padding: 0 6px;
+            }
+          }
+        }
+      }
+
+      .ant-tabs-extra-content {
+        .order-tablist {
+          .tab-avatar {
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+    > .ant-tabs-content {
+      padding-left: 0 !important;
+      border-left: none !important;
+      height: 100%;
+      padding-top: 56px;
+      .ant-tabs-tabpane {
+        height: 100%;
+        .ant-layout {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.home-div {
+  width: 100%;
+  height: 100%;
+}
+
+.home-linear-gradient {
+  background: linear-gradient(-20deg, #86746e, #4c90c2);
+}
+
+.home-web {
+  width: 75%;
+  height: 50%;
+  position: absolute;
+  min-width: 968px;
+  max-width: 1024px;
+  min-height: 640px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 60px #666;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.layout-content-spin {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

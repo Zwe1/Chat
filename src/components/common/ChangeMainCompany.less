@@ -1,0 +1,71 @@
+@import '../../style/mixins.less';
+
+.ant-modal {
+	.ant-modal-content {
+		.ant-modal-body {
+			.ant-radio-group {
+				.company-radio {
+					margin: 13px 0;
+					span.ant-radio + * {
+						display: inline-block;
+						padding: 0 35px 0 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.change-main-company {
+	width: 420px !important;
+	.ant-modal-header {
+    background: #f1f2f6;
+    border-bottom: none;
+	}
+	.ant-modal-body {
+		padding: 5px 24px;
+	}
+	.ant-radio-group {
+		width: 100%;
+	}
+	.company-head {
+		font-size: 14px;
+		color: @color-text-main;
+		line-height: 2em;
+		margin: 8px 0;
+	}
+	.ant-radio-wrapper {
+		display: block;
+		width: 85%;
+		position: relative;
+		color: #666;
+		font-size: 13px;
+		line-height: 2.4em;
+		margin-left: 15px;
+		white-space: normal;
+		.ant-radio {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+			.ant-radio-inner {
+				border: none;
+				&:after {
+					content: '\E632';
+					font-family: "anticon" !important;
+					background: transparent;
+					color: #1890ff;
+					left: 0;
+					top: -2px;
+					font-size: 18px;
+				}
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.ant-alert-info {
+		margin: 20px 0;
+	}
+}

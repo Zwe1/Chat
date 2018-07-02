@@ -1,0 +1,79 @@
+@import '../../style/mixins.less';
+
+.eMobile-prod {
+	.eMobile-button {
+		position: fixed !important;
+		top: 85% !important;
+		right: 0 !important;
+		background: green !important;
+		cursor: pointer !important;
+	}
+	.eMobile-content {
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		.eMobile-overlay {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			background: rgba(0, 0, 0, 0.7) !important;
+		}
+		.eMobile-dialog {
+			position: fixed !important;
+			width: 968px !important;
+			height: 640px !important;
+			right: 0 !important;
+			bottom: 0 !important;
+			transition: .5s all ease-in-out !important;
+			transform: scale(0.2) !important;
+			transform-origin: 100% 100% !important;
+			.eMobile-close {
+		    position: absolute !important;
+		    width: 20px !important;
+		    height: 20px !important;
+		    top: 17px !important;
+		    right: 15px !important;
+		    cursor: pointer !important;
+		    z-index: 11 !important;
+		    &:before, &:after {
+		      content: '' !important;
+		      display: block !important;
+		      position: absolute !important;
+		      width: 100% !important;
+		      height: 2px !important;
+		      transition: all .25s !important;
+		      background: rgba(0, 0, 0, 0.6) !important;
+		      top: 50% !important;
+		      left: 50% !important;
+		    }
+		    &:before {
+		      transform: translate(-50%, -50%) rotate(45deg) !important;
+		    }
+		    &:after {
+		      transform: translate(-50%, -50%) rotate(-45deg) !important;
+		    }
+		    &:hover {
+		      &:before, &:after {
+		        background: @color-blue !important;
+		      }
+		    }
+			}
+			.eMobile-iframe {
+				width: 968px !important;
+				height: 640px !important;
+				border: none !important;
+				background: #fff !important;
+			}
+		}
+		.eMobile-dialog-show {
+			transform: scale(1) !important;
+		}
+		.eMobile-dialog-hide {
+			transform: scale(0.2) !important;
+		}
+	}
+}

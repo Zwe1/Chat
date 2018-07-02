@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <title></title>
+  <style>
+    @keyframes antSpinMove {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes antRotate {
+      to {
+        transform: rotate(405deg);
+      }
+    }
+
+    .transit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 300px;
+    }
+
+    .transit-spin {
+      font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      vertical-align: middle;
+      text-align: center;
+      transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      transform: rotate(45deg);
+      -webkit-animation: antRotate 1.2s infinite linear;
+      animation: antRotate 1.2s infinite linear;
+    }
+
+    .transit-spin i {
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      background-color: #1890ff;
+      -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+      transform: scale(0.75);
+      display: block;
+      position: absolute;
+      opacity: 0.3;
+      animation: antSpinMove 1s infinite linear alternate;
+      transform-origin: 50% 50%;
+    }
+
+    .transit-spin i:nth-child(1) {
+      left: 0;
+      top: 0;
+    }
+
+    .transit-spin i:nth-child(2) {
+      right: 0;
+      top: 0;
+      animation-delay: 0.4s;
+    }
+
+    .transit-spin i:nth-child(3) {
+      right: 0;
+      bottom: 0;
+      animation-delay: 0.8s;
+    }
+
+    .transit-spin i:nth-child(4) {
+      left: 0;
+      bottom: 0;
+      animation-delay: 1.2s;
+    }
+  </style>
+  <script>
+    window.baseURL = 'https://ms.wx.weaver.com.cn';
+  </script>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+<div id="react-root">
+  <div class='transit'>
+    <span class='transit-spin'>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+  </div>
+</body>
+
+</html>

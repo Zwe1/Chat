@@ -1,0 +1,26 @@
+@import '../../style/mixins.less';
+
+.em-popover {
+	.ant-popover-content {
+		.ant-popover-arrow {
+			display: none;
+		}
+		.ant-popover-inner-content {
+			min-width: 270px;
+			max-width: 330px;
+			padding: 0;
+			min-height: 400px;
+			.ant-spin {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+.tab-popover {
+	top: 1px !important;
+}

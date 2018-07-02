@@ -1,0 +1,34 @@
+@import '../../style/mixins.less';
+
+.chat-chat {
+
+}
+
+.chat-list-wrapper.ant-layout-sider {
+  background-color: @color-white;
+  border-right: 1px solid #e0e0e0;
+}
+
+.chat-content.ant-layout {
+  background-color: #fff;
+  position: relative;
+}
+
+.chat-content-main {
+	width: 100%;
+	height: 100%;
+	background: @color-bg-chat;
+	text-align: center;
+	padding-top: 120px;
+	.anticon-warning {
+		font-size: 18px;
+		color: rgba(250, 173, 20, 1);
+	}
+	h1 {
+		display: inline-block;
+		font-size: 16px;
+		color: @color-text-main;
+		font-weight: normal;
+		margin-left: 8px;
+	}
+}

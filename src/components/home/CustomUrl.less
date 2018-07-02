@@ -1,0 +1,50 @@
+@import '../../style/mixins.less';
+
+.custom-url {
+	height: 100%;
+	background: #fff;
+	position: relative;
+	.custom-webview {
+		height: 100%;
+	}
+	.webview-out {
+		height: calc(~"100% - 58px");
+	}
+	.webview-spin {
+		position: absolute;
+		top: 80px;
+		left: 50%;
+		transfrom: translateX(-50%);
+	}
+	.btn-div {
+		background: transparent;
+		position: absolute;
+		top: 10px;
+		right: 120px;
+		.ant-btn {
+			background: transparent;
+			border: none;
+			padding: 0 12px;
+		}
+		i {
+			cursor: pointer;
+			color: @color-text-light;
+		}
+	}
+	.in-app {
+		top: -45px;
+		-webkit-app-region: no-drag;
+	}
+	.webview-spin-content {
+		position: fixed;
+		left: 0;
+		top: 58px;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		z-index: 1;
+	}
+	.spin-in-app {
+		left: 61px;
+	}
+}
